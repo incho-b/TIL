@@ -1,10 +1,12 @@
-## 들어가기전에
+## **들어가기전에**
 
 -   HTML5를 기준으로 한다.
 
 -   Semantic Tag 란, 태그만 보고도 그 의미가 통하도록 하는 태그이다.
 
 -   태그는 `<tag> </tag>` 의 양식으로 작성하며, 빈 태그 혹은 닫는 태그가 없는 태그의 경우에는 `<tag />` 의 양식으로 작성한다.
+
+    <br /> <br />
 
 # Semantic Tag
 
@@ -89,3 +91,70 @@
 
 -   `<detail>` 요소의 공개 상자에 대한 요약, 캡션 또는 범례를 지정한다.
 -   `<summary>` 요소를 클릭하면 부모 `<detail>` 요소의 상태가 열리거나 닫힌다.
+
+    <br />
+
+## - Gourp Tag
+
+## `<hgroup>`
+
+-   문서 구획의 다단계 제목을 나타며, 다수의 `<h1> - <h6>` 요소를 묶을 때 사용한다.
+-   ```html
+    <hgroup>
+    	<h1>Calculus I</h1>
+    	<h2>Fundamentals</h2>
+    </hgroup>
+    <p>
+    	This course will start with a brief introduction about the limit of a function. Then we will describe how the idea of derivative
+    	emerges in the Physics and Geometry fields. After that, we will explain that the key to master calculus is …
+    </p>
+    ```
+
+## `<colgroup>`
+
+-   표의 열을 묶는 그룹을 정의한다
+-   ```html
+    <table>
+    	<caption>
+    		Superheros and sidekicks
+    	</caption>
+    	<colgroup>
+    		<col />
+    		<col span="2" class="batman" />
+    		<col span="2" class="flash" />
+    	</colgroup>
+    	<tr>
+    		<td> </td>
+    		<th scope="col">Batman</th>
+    		<th scope="col">Robin</th>
+    		<th scope="col">The Flash</th>
+    		<th scope="col">Kid Flash</th>
+    	</tr>
+    	<tr>
+    		<th scope="row">Skill</th>
+    		<td>Smarts</td>
+    		<td>Dex, acrobat</td>
+    		<td>Super speed</td>
+    		<td>Super speed</td>
+    	</tr>
+    </table>
+    ```
+
+## `<optgroup>`
+
+-   `<select>` 요소의 옵션을 묶을 수 있다.
+-   ```html
+    <label for="dino-select">Choose a dinosaur:</label>
+    <select id="dino-select">
+    	<optgroup label="Theropods">
+    		<option>Tyrannosaurus</option>
+    		<option>Velociraptor</option>
+    		<option>Deinonychus</option>
+    	</optgroup>
+    	<optgroup label="Sauropods">
+    		<option>Diplodocus</option>
+    		<option>Saltasaurus</option>
+    		<option>Apatosaurus</option>
+    	</optgroup>
+    </select>
+    ```
